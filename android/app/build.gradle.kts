@@ -1,5 +1,8 @@
 plugins {
     id("com.android.application")
+    // START: FlutterFire Configuration
+    id("com.google.gms.google-services")
+    // END: FlutterFire Configuration
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
@@ -8,7 +11,9 @@ android {
     namespace = "com.example.tempo"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
-
+     buildFeatures {
+        resValues = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -23,6 +28,25 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+    }
+
+    flavorDimensions += "default"
+    productFlavors {
+        create("Development") {
+            dimension = "default"
+            resValue(
+                type = "string",
+                name = "app_name",
+                value = "Tempo Development")
+            applicationIdSuffix = ".dev"
+        }
+        create("Production") {
+            dimension = "default"
+            resValue(
+                type = "string",
+                name = "app_name",
+                value = "Tempo Production")
+        }
     }
 
     buildTypes {

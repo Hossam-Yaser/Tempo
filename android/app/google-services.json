@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1091436851426",
+    "project_id": "tempo-ddacc",
+    "storage_bucket": "tempo-ddacc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091436851426:android:e6948573108c7235cd6ebb",
+        "android_client_info": {
+          "package_name": "com.example.tempo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB2-SpX1vvz6K_jb6gD_V9F9lFuV2XT9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

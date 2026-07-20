@@ -11,7 +11,9 @@ android {
     namespace = "com.example.tempo"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
-
+     buildFeatures {
+        resValues = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -44,7 +46,6 @@ android {
                 type = "string",
                 name = "app_name",
                 value = "Tempo Production")
-            applicationIdSuffix = ".prod"
         }
     }
 

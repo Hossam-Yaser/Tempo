@@ -38,14 +38,13 @@ android {
                 type = "string",
                 name = "app_name",
                 value = "Tempo Development")
-            applicationIdSuffix = ".dev"
         }
         create("Production") {
             dimension = "default"
             resValue(
                 type = "string",
                 name = "app_name",
-                value = "Tempo Production")
+                value = "Tempo")
         }
     }
 
